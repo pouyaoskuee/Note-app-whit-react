@@ -60,6 +60,7 @@ select{
     display: flex;
     flex: 1;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
 
@@ -100,6 +101,8 @@ select{
 
 .cart__icon{
     display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 

@@ -16,6 +16,7 @@ function Notes(){
                             <p>description</p>
                         </div>
                         <div className="cart__icon">
+                            <span>🗑️</span>
                             <input type="checkbox" />
                         </div>
                     </div>
@@ -28,6 +29,7 @@ function Notes(){
                             <p>description</p>
                         </div>
                         <div className="cart__icon">
+                            <span>🗑️</span>
                             <input type="checkbox" />
                         </div>
                     </div>
