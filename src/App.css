@@ -1,0 +1,107 @@
+.section{
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 13rem;
+    gap: 3rem;
+    ;
+}
+
+.header{
+    margin:  auto;
+    padding-bottom: 3rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+    border-bottom: solid 1px #5a5a5a;
+
+}
+
+select{
+    width: 15rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.addNote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60rem;
+    gap: 3rem;
+
+}
+
+.addNote__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.addNote__form input,button {
+    width: 50rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.addNote__form button {
+    background-color: blue;
+    color: white;
+}
+
+
+
+.notes{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.notes__sort ul{
+    display: flex;
+    gap: 20rem;
+}
+
+.notes__carts{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.notes__cart{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.cart__header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #5a5a5a;
+}
+
+.cart__description{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart__icon{
+    display: flex;
+}
+
+
+
+
