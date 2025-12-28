@@ -1,4 +1,11 @@
-function Notes(){
+import {useState} from "react";
+
+
+
+function Notes({notess , onDelete}){
+
+
+
     return (
         <div className="notes">
             <div className="notes__sort">
@@ -9,32 +16,9 @@ function Notes(){
                 </ul>
             </div>
             <div className="notes__carts">
-                <div className="notes__cart">
-                    <div className='cart__header'>
-                        <div className="cart__description">
-                            <p>title</p>
-                            <p>description</p>
-                        </div>
-                        <div className="cart__icon">
-                            <span>🗑️</span>
-                            <input type="checkbox" />
-                        </div>
-                    </div>
-                    <div className='cart__date'>july 12 2025</div>
-                </div>
-                <div className="notes__cart">
-                    <div className='cart__header'>
-                        <div className="cart__description">
-                            <p>title</p>
-                            <p>description</p>
-                        </div>
-                        <div className="cart__icon">
-                            <span>🗑️</span>
-                            <input type="checkbox" />
-                        </div>
-                    </div>
-                    <div className='cart__date'>july 12 2025</div>
-                </div>
+                {notess.map((note) => (
+                    <NotesCard note={note} key={note.id} onDelete={onDelete} />
+                ))}
             </div>
         </div>
     )
@@ -43,3 +27,32 @@ function Notes(){
 
 
 export default Notes
+
+
+
+function NotesCard({note , onDelete}){
+    const option ={
+        year:'numeric',
+        month:'long',
+        day:'numeric',
+    }
+
+
+
+
+    return (
+        <div className="notes__cart">
+            <div className='cart__header'>
+                <div className="cart__description">
+                    <p>{note.title}</p>
+                    <p>{note.description}</p>
+                </div>
+                <div className="cart__icon">
+                    <span onClick={()=>onDelete(note.id)} >🗑️</span>
+                    <input type="checkbox" />
+                </div>
+            </div>
+            <div className='cart__date'>{new Date(note.created).toLocaleDateString('en-US', option)}</div>
+        </div>
+    )
+}
