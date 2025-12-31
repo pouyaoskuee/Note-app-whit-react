@@ -1,3 +1,4 @@
+import Message from "./Message.jsx";
 
 
 function Notes({notess , onDelete ,onChekd , sortNotes}) {
@@ -59,7 +60,12 @@ const NoteSort = ({notess}) => {
     const CompletedNotes = notess.filter((note) => note.completed)
     const UnCompletedNotes = notess.filter((note) => !note.completed)
 
-    if (!AllNotes) return <h2>you dont have any notes</h2>
+    if (!AllNotes){
+        return <Message>
+           <p>this is a child message ℹ️ </p>
+        </Message>
+    }
+
 
     return (
         <div className="notes__sort">
